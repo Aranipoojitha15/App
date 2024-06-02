@@ -1,0 +1,226 @@
+/* App.css */
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif; /* Modern font */
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light gray text */
+}
+
+.login-container {
+    padding: 20px; /* Increased padding */
+    border: 4px solid #1e1e1e; /* Darker border */
+    background-color: #1e1e1e; /* Dark background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+.app {
+    text-align: center;
+    padding: 20px;
+}
+
+.welcome-message {
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #2b2b2b; /* Darker background */
+    color: #e0e0e0; /* Light gray text */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+.welcome-message h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #ffcc00; /* Yellow accent for the heading */
+}
+
+.search {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search input {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #007acc; /* Medium blue border */
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+    background-color: #1e1e1e; /* Dark background */
+    color: #e0e0e0; /* Light gray text */
+}
+
+.search input:focus {
+    border-color: #9370DB; /* Lavender on focus */
+}
+
+.search img {
+    cursor: pointer;
+    vertical-align: middle;
+    margin-left: 10px;
+    width: 30px;
+    transition: transform 0.3s;
+}
+
+.search img:hover {
+    transform: scale(1.1);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie {
+    background-color: #2b2b2b; /* Darker background */
+    color: #e0e0e0; /* Light gray text */
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px;
+    width: 220px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 2px solid #007acc; /* Medium blue border */
+}
+
+.movie:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+.movie img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.movie h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.movie button {
+    background-color: #007acc; /* Medium blue button */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.movie button:hover {
+    background-color: #9370DB; /* Lavender on hover */
+    transform: translateY(-2px);
+}
+
+.cart {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.cart h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em; /* Increased font size */
+}
+
+.empty {
+    color: #666; /* Medium gray text for empty state */
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #1e1e1e; /* Dark background */
+    padding: 15px;
+    border-bottom: 2px solid #333; /* Dark border */
+}
+
+nav a {
+    color: #e0e0e0; /* Light gray text */
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #9370DB; /* Lavender accent on hover */
+}
+
+.cart-link {
+    position: relative;
+}
+
+.cart-link::after {
+    content: attr(data-count);
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    
+    color: white;
+    border-radius: 50%;
+    padding: 2px 8px;
+    font-size: 0.8em;
+}
+
+.login-page,
+.register-page {
+    color: #e0e0e0; /* Light gray text */
+}
+
+.login-page h2,
+.register-page h2 {
+    color: #007acc; /* Medium blue headings */
+    font-size: 1.8em; /* Increased font size */
+}
+
+.login-page p,
+.register-page p {
+    color: #888; /* Medium gray paragraph text */
+}
+
+.login-background {
+    background-image: url('1.jpg'); /* Update with the actual path to your image */
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #111010;
+    color: white;
+  }
+  
+  .navbar-logo {
+    margin-right: auto;
+  }
+  
+  .logo-image {
+    height: 40px; /* Adjust the height as needed */
+  }
+  
+  .navbar-links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+  }
+  
+  .cart-link a {
+    color: white;
+    text-decoration: none;
+  }
