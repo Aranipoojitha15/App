@@ -1,14 +1,21 @@
 const express = require("express");
 const mongoose = require('mongoose');
 const cors = require("cors");
+const dotenv = require("dotenv");
 const EmployeeModel = require('./models/Employee');
+
+// Load environment variables from config.env file
+dotenv.config({ path: './config.env' });
 
 const app = express();
 app.use(express.json());
 app.use(cors());
 
+// Log the MongoDB URL
+console.log("MongoDB URL:", process.env.MONGODB_URL);
+
 // Connect to MongoDB
-mongoose.connect("mongodb://localhost:27017/employee", {
+mongoose.connect(process.env.MONGODB_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
@@ -24,11 +31,11 @@ app.post('/register', (req, res) => {
 
 // Route to handle login
 app.post("/login", (req, res) => {
-  const { email, password } = req.body; // Destructure req.body correctly
+  const { email, password } = req.body;
   EmployeeModel.findOne({ email: email })
     .then(user => {
       if (user) {
-        if (user.password === password) { // Fixed syntax here
+        if (user.password === password) {
           res.json("Success");
         } else {
           res.json("The password is incorrect");
